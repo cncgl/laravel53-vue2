@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b8feb5c0cd3b1f605347ef4bed4bb809",
-    "content-hash": "36ec4a535e9aa22200cede199bad65e6",
+    "hash": "758e231b7d23716ce38a34c5f1a0b26b",
+    "content-hash": "f3df731de328c434de8ac0d229d47f50",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -1021,6 +1021,42 @@
                 "random"
             ],
             "time": "2016-04-03 06:00:07"
+        },
+        {
+            "name": "pion/laravel-chunk-upload",
+            "version": "v0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pionl/laravel-chunk-upload.git",
+                "reference": "ce68269b4c406f101f06b4b99f94d663e7fdaef0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pionl/laravel-chunk-upload/zipball/ce68269b4c406f101f06b4b99f94d663e7fdaef0",
+                "reference": "ce68269b4c406f101f06b4b99f94d663e7fdaef0",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pion\\Laravel\\ChunkUpload\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Martin Kluska",
+                    "email": "martin.kluska@imakers.cz"
+                }
+            ],
+            "description": "Service for chunked upload with several js providers",
+            "time": "2016-10-04 11:37:12"
         },
         {
             "name": "psr/log",

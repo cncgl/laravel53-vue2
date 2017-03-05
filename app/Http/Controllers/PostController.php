@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+# use Illuminate\Http\Request;
+# use Illuminate\Http\Response;
 use App\Http\Requests;
 use App\Model\Post;
+use Debugbar;
 
 class PostController extends Controller
 {
@@ -17,6 +18,7 @@ class PostController extends Controller
   public function index()
   {
     $posts = Post::all();
+    Debugbar::info($posts);
     return response()->json($posts);
   }
 

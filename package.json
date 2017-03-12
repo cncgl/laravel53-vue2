@@ -6,6 +6,7 @@
     "swagger": "vendor/bin/swagger app/Http/Controllers -o public/swagger"
   },
   "devDependencies": {
+    "axios": "^0.15.3",
     "bootstrap-sass": "^3.3.7",
     "gulp": "^3.9.1",
     "jquery": "^3.1.0",
@@ -14,6 +15,6 @@
     "laravel-elixir-webpack-official": "^1.0.9",
     "lodash": "^4.16.2",
     "vue": "^2.1.7",
-    "vue-resource": "^1.0.3"
+    "vuex": "^2.2.1"
   }
 }

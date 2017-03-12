@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+import store from './store';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -28,7 +29,9 @@ Vue.component(
   require('./components/passport/PersonalAccessTokens.vue')
 );
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('sample', require('./components/Sample.vue'));
 
 const app = new Vue({
-  el: '#app'
+  el: '#app',
+  store
 });

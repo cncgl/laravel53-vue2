@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Debugbar;
 
 class SampleController extends Controller
 {
@@ -12,7 +13,8 @@ class SampleController extends Controller
    */
   public function __construct()
   {
-    $this->middleware('auth');
+    // とりあえず外す
+    // $this->middleware('auth');
   }
 
   /**

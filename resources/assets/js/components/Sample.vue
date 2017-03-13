@@ -1,27 +1,31 @@
 <template>
-    <div>
-        <header-component/>
-        <div>this is template body</div>
-        <other-component/>
-    </div>
+  <div>
+    <div>HelloWorld</div>
+    {{ this.responseContents }}
+    <div v-if="this.receiveResponse"> Thank you! </div>
+  </div>
 </template>
+
 <style>
-    body{
-        background-color:#ff0000;
-    }
+  body {
+    background-color: #ececec;
+  }
 </style>
+
 <script>
-    import HeaderComponent from './components/header.vue'
-    import OtherComponent from './components/other.vue'
-    export default{
-        data(){
-            return{
-                msg:'hello vue'
-            }
-        },
-        components:{
-            'other-component':OtherComponent,
-            HeaderComponent,
-        }
+  import {TOGGLE_STATE, SEND_REQUEST} from '../store/mutation-types';
+  export default{
+    mounted: function() {
+      this.$store.dispatch(SEND_REQUEST, '/api/posts')
+    },
+
+    computed: {
+      receiveResponse(){
+        return this.$store.getters.receiveResponse
+      },
+      responseContents(){
+        return this.$store.getters.responseContents
+      }
     }
+  }
 </script>

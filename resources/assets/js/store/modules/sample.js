@@ -10,7 +10,7 @@ const state = {
 };
 
 const getters = {
-  receiveReponse: state => state.receive_response,
+  receiveResponse: state => state.receive_response,
   responseContents: state => state.response_contents
 };
 

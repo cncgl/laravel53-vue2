@@ -19,7 +19,8 @@ class PostController extends Controller
    */
   public function index()
   {
-    $postService = App::make(App\Services\PostService::class);
+    // $postService = App::make(App\Services\PostService::class);
+    $postService = app(App\Services\PostService::class);
     $posts = $postService->index();
     return response()->json($posts);
 //    $posts = Post::all();

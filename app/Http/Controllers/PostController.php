@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 # use Illuminate\Http\Request;
 # use Illuminate\Http\Response;
+use App\Services\PostService;
 use App\Http\Requests;
 use App\Model\Post;
+use App;
 use Debugbar;
 
 class PostController extends Controller
@@ -17,9 +19,12 @@ class PostController extends Controller
    */
   public function index()
   {
-    $posts = Post::all();
-    Debugbar::info($posts);
+    $postService = App::make(App\Services\PostService::class);
+    $posts = $postService->index();
     return response()->json($posts);
+//    $posts = Post::all();
+//    Debugbar::info($posts);
+//    return response()->json($posts);
   }
 
   /**
